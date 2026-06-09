@@ -1,0 +1,22 @@
+# Python/runtime artifacts
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Logs and temporary files
+*.log
+*.tmp
+*.swp
+*.swo
+
+# Machine-local overrides, if added later
+*.local
+*.local.*
+local.*
+hyprland.local.lua
+hypridle.local.conf
+hyprlock.local.conf
+
+# OS/editor metadata
+.DS_Store
+Thumbs.db
