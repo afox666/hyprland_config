@@ -44,6 +44,10 @@ local scratchpad = os.getenv("HOME") .. "/.config/hypr/scripts/hypr-scratchpad.s
 local scratchpadStatus = os.getenv("HOME") .. "/.config/hypr/scripts/hypr-scratchpad-status-watch.sh"
 local lockScreen = os.getenv("HOME") .. "/.config/hypr/scripts/hypr-lock.sh"
 local idleDaemon = os.getenv("HOME") .. "/.config/hypr/scripts/hypr-idle.sh"
+local waybarConfig = os.getenv("HOME") .. "/.config/hypr/waybar/config.jsonc"
+local waybarStyle = os.getenv("HOME") .. "/.config/hypr/waybar/style.css"
+local waybar = "waybar -c " .. waybarConfig .. " -s " .. waybarStyle
+local networkApplet = "pgrep -x nm-applet >/dev/null || nm-applet --indicator"
 
 
 -------------------
@@ -62,6 +66,8 @@ local idleDaemon = os.getenv("HOME") .. "/.config/hypr/scripts/hypr-idle.sh"
 -- end)
 
 hl.on("hyprland.start", function ()
+    hl.exec_cmd(waybar)
+    hl.exec_cmd(networkApplet)
     hl.exec_cmd(workspaceCornerScroll)
     hl.exec_cmd(scratchpadStatus)
     -- Auto-lock is disabled until hyprlock is confirmed stable.

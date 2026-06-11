@@ -7,6 +7,7 @@ Personal Hyprland configuration and helper scripts.
 - `hyprland.lua` - Hyprland Lua config.
 - `hypridle.conf` - idle/lock policy.
 - `hyprlock.conf` - lock screen config.
+- `waybar/` - Waybar bar and tray config.
 - `scripts/` - helper scripts for lock, idle, screenshot, scratchpad, and workspace corner scrolling.
 
 ## Dependencies
@@ -15,6 +16,8 @@ Install the pieces you use on the target machine:
 
 - Hyprland with Lua config support
 - `hyprlock`, `hypridle`, `hyprctl`
+- `waybar`
+- `nm-applet`
 - `ghostty`, `dolphin`, `rofi`
 - `wpctl`, `brightnessctl`, `playerctl`
 - `flameshot`
