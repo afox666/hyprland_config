@@ -54,12 +54,32 @@ tooltip label {
 
 #network,
 #pulseaudio,
+#custom-scratchpad,
 #clock,
 #tray {
     margin: 5px 0;
     padding: 0 10px;
     border-radius: 6px;
     background: rgba(255, 255, 255, 0.07);
+}
+
+#custom-scratchpad {
+    margin-left: 0;
+    color: #d7dde1;
+}
+
+#custom-scratchpad.open {
+    background: rgba(88, 214, 141, 0.18);
+    color: #9fffcf;
+}
+
+#custom-scratchpad.closed {
+    background: rgba(255, 255, 255, 0.08);
+    color: #cbd5e1;
+}
+
+#custom-scratchpad.empty {
+    color: #8b95a1;
 }
 
 #network.disconnected,

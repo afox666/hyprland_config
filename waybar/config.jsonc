@@ -6,7 +6,8 @@
     "spacing": 8,
 
     "modules-left": [
-        "hyprland/workspaces"
+        "hyprland/workspaces",
+        "custom/scratchpad"
     ],
     "modules-center": [
         "hyprland/window"
@@ -32,6 +33,15 @@
         "max-length": 80,
         "separate-outputs": true,
         "swap-icon-label": false
+    },
+
+    "custom/scratchpad": {
+        "exec": "$HOME/.config/hypr/scripts/hypr-scratchpad-waybar.py",
+        "return-type": "json",
+        "on-click": "$HOME/.config/hypr/scripts/hypr-scratchpad.sh toggle",
+        "on-click-right": "$HOME/.config/hypr/scripts/hypr-scratchpad.sh push",
+        "on-click-middle": "$HOME/.config/hypr/scripts/hypr-scratchpad.sh pop",
+        "tooltip": true
     },
 
     "network": {

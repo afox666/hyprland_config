@@ -41,7 +41,6 @@ local menu        = "rofi -show drun"
 local workspaceCornerScroll = os.getenv("HOME") .. "/.config/hypr/scripts/workspace-corner-scroll-watch.sh"
 local flameshotGui = os.getenv("HOME") .. "/.config/hypr/scripts/flameshot-gui.sh"
 local scratchpad = os.getenv("HOME") .. "/.config/hypr/scripts/hypr-scratchpad.sh"
-local scratchpadStatus = os.getenv("HOME") .. "/.config/hypr/scripts/hypr-scratchpad-status-watch.sh"
 local lockScreen = os.getenv("HOME") .. "/.config/hypr/scripts/hypr-lock.sh"
 local idleDaemon = os.getenv("HOME") .. "/.config/hypr/scripts/hypr-idle.sh"
 local waybarConfig = os.getenv("HOME") .. "/.config/hypr/waybar/config.jsonc"
@@ -69,7 +68,6 @@ hl.on("hyprland.start", function ()
     hl.exec_cmd(waybar)
     hl.exec_cmd(networkApplet)
     hl.exec_cmd(workspaceCornerScroll)
-    hl.exec_cmd(scratchpadStatus)
     -- Auto-lock is disabled until hyprlock is confirmed stable.
     -- hl.exec_cmd(idleDaemon)
 end)
